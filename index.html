@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#090507">
+<meta name="description" content="مفاجأة صغيرة مليئة بالحب لحبيبة ❤️">
+<title>إلى حبيبة ❤️</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;500;600;700;800&display=swap');
+:root{--red:#ff3155;--pink:#ff8ca3;--bg:#080507;--muted:#d6bfc5}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(ellipse at 50% 40%,#2a0713 0%,#10060b 45%,#050405 100%);color:#fff;font-family:'Cairo',sans-serif;min-height:100vh;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.22;background-image:radial-gradient(#fff 0.7px,transparent .7px);background-size:43px 43px;mask-image:linear-gradient(to bottom,black,transparent 90%);z-index:0}
+#stars,#burst{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:4}
+.wrap{position:relative;z-index:1;min-height:100svh;display:flex;align-items:center;justify-content:center;padding:28px 16px}
+.panel{width:min(760px,100%);text-align:center;position:relative}
+.eyebrow{color:#ff9aad;letter-spacing:3px;font-size:.72rem;margin:0 0 15px}
+h1,h2,p{margin-top:0}
+h1{font-family:'Amiri',serif;font-size:clamp(2.6rem,10vw,5.5rem);font-weight:700;line-height:1.2;margin-bottom:12px;text-shadow:0 0 28px #ff315555}
+.intro{color:#e6cfd5;line-height:2;font-size:clamp(.96rem,3vw,1.12rem);max-width:520px;margin:0 auto 27px}
+.glow{color:var(--pink);text-shadow:0 0 20px #ff3155}
+.primary,.ghost{font-family:inherit;border-radius:999px;padding:14px 25px;font-size:1rem;cursor:pointer;transition:transform .25s,box-shadow .25s;background:linear-gradient(135deg,#ff526f,#b50d37);color:#fff;border:1px solid #ff8ca377;box-shadow:0 8px 35px #ff174455}
+.primary:hover{transform:translateY(-3px);box-shadow:0 12px 45px #ff174477}
+.ghost{background:#ffffff08;border:1px solid #ffffff2b;box-shadow:none;color:#f8dfe5;padding:10px 18px;font-size:.88rem}
+.music-toggle{position:fixed;z-index:10;top:14px;left:14px;border:1px solid #ffffff25;background:#160910d9;color:#ffe2e8;border-radius:999px;padding:10px 13px;font:inherit;font-size:.78rem;cursor:pointer;backdrop-filter:blur(12px)}
+.music-toggle span{display:inline-block;margin-left:6px}
+.screen{display:none;animation:fadeUp .9s ease both}.screen.active{display:block}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.heart-stage{position:relative;width:min(350px,85vw);height:min(330px,80vw);max-height:330px;margin:8px auto 0;display:grid;place-items:center}
+.heart-stage svg{width:100%;height:100%;overflow:visible;filter:drop-shadow(0 0 13px #ff244c88)}
+.heart-path{fill:none;stroke:#ff3155;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1200;stroke-dashoffset:1200;animation:drawHeart 3.2s cubic-bezier(.5,.05,.3,1) forwards;filter:drop-shadow(0 0 8px #ff3155)}
+.heart-fill{fill:url(#heartGrad);opacity:0;animation:fillHeart 1.4s ease 2.4s forwards}
+@keyframes drawHeart{to{stroke-dashoffset:0}}
+@keyframes fillHeart{to{opacity:.13}}
+.name-in-heart{font-family:'Amiri',serif;font-size:clamp(2rem,7vw,3rem);fill:#fff;text-anchor:middle;opacity:0;animation:nameAppear 1s ease 3.2s forwards;filter:drop-shadow(0 0 9px #ff3155)}
+@keyframes nameAppear{to{opacity:1}}
+.caption{font-family:'Amiri',serif;font-size:1.45rem;color:#ffb5c3;margin:0 auto 24px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:25px auto;max-width:620px}
+.love-card{min-height:105px;border:1px solid #ff648333;background:linear-gradient(145deg,#ffffff0b,#ff17440a);border-radius:18px;padding:15px 10px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:7px;color:#ffe3e9}
+.love-card .emoji{font-size:1.55rem}.love-card small{color:#d8b8c1;font-size:.76rem}
+.final-note{font-family:'Amiri',serif;font-size:clamp(1.7rem,6vw,2.8rem);line-height:1.8;color:#fff;text-shadow:0 0 25px #ff315566;max-width:680px;margin:0 auto 16px}
+.signature{color:#ff9aad;font-size:.95rem;line-height:2}
+footer{position:relative;z-index:1;text-align:center;padding:0 12px 20px;color:#806a72;font-size:.7rem}
+.heart-float{position:fixed;bottom:-30px;z-index:2;pointer-events:none;animation:floatUp linear forwards;color:#ff3155;text-shadow:0 0 15px #ff1744}
+@keyframes floatUp{0%{transform:translateY(0) scale(.7) rotate(0);opacity:0}10%{opacity:.8}100%{transform:translateY(-115vh) scale(1.3) rotate(35deg);opacity:0}}
+@media(max-width:520px){.wrap{padding:66px 17px 34px}.cards{grid-template-columns:1fr;max-width:310px}.love-card{min-height:78px;flex-direction:row}.love-card small{margin-right:auto}.heart-stage{height:270px}.intro{line-height:1.9}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<canvas id="stars"></canvas><canvas id="burst"></canvas>
+<button class="music-toggle" id="musicBtn" aria-label="تشغيل الموسيقى"><span>♫</span> <b id="musicLabel">شغّلي الموسيقى</b></button>
+<main class="wrap">
+  <section class="panel">
+    <div class="screen active" id="welcome">
+      <p class="eyebrow">رسالة صغيرة من القلب</p>
+      <h1>في حدا إله مكان<br><span class="glow">ما بشبه حدا…</span></h1>
+      <p class="intro">حضّرتلك إشي صغير، بس معناه أكبر من حجمه.<br>خدي نفس… واضغطي، لأن الحكاية إلك إنتِ. ❤️</p>
+      <button class="primary" id="startBtn">افتحي مفاجأتكِ ❤️</button>
+    </div>
+    <div class="screen" id="heartScreen">
+      <p class="eyebrow">اسْمِك مرسوم بقلبي</p>
+      <h1 style="font-size:clamp(2.2rem,8vw,4rem)">حكاية اسمها <span class="glow">حبيبة</span></h1>
+      <div class="heart-stage" aria-label="قلب متوهج يُرسم حول اسم حبيبة">
+        <svg viewBox="0 0 320 300" role="img" aria-label="قلب مرسوم باسم حبيبة">
+          <defs><linearGradient id="heartGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff6a85"/><stop offset="1" stop-color="#a8002b"/></linearGradient></defs>
+          <path class="heart-fill" d="M160 264 C133 238 33 170 33 91 C33 25 117 13 160 75 C203 13 287 25 287 91 C287 170 187 238 160 264Z"/>
+          <path class="heart-path" d="M160 264 C133 238 33 170 33 91 C33 25 117 13 160 75 C203 13 287 25 287 91 C287 170 187 238 160 264Z"/>
+          <text x="160" y="151" class="name-in-heart">حبيبة</text>
+        </svg>
+      </div>
+      <p class="caption">مش بس اسم… إنتِ شعور حلو ❤️</p>
+      <button class="primary" id="continueBtn">في إشي كمان إلك ✨</button>
+    </div>
+    <div class="screen" id="messageScreen">
+      <p class="eyebrow">كم كلمة من قلبي</p>
+      <h1 style="font-size:clamp(2.4rem,8vw,4rem)">إلى حبيبة…</h1>
+      <p class="intro">يمكن ما بتكفي الكلمات توصف قديش وجودك بيفرق،<br>بس حبيت أعملك لحظة صغيرة تذكّرك إنك غالية،<br>وإنه في قلب بتفرّحيه لمجرد إنك إنتِ. 💗</p>
+      <div class="cards">
+        <div class="love-card"><span class="emoji">❤️</span><b>ضحكتك</b><small>بتغيّر شكل اليوم</small></div>
+        <div class="love-card"><span class="emoji">✨</span><b>وجودك</b><small>إله طعم مختلف</small></div>
+        <div class="love-card"><span class="emoji">🌙</span><b>اسمك</b><small>إله مكان بالقلب</small></div>
+      </div>
+      <button class="primary" id="finalBtn">اضغطي للنهاية… ❤️</button>
+    </div>
+    <div class="screen" id="finalScreen">
+      <p class="eyebrow">وهاي إلك، من قلبي</p>
+      <div style="font-size:clamp(3.5rem,18vw,7rem);filter:drop-shadow(0 0 22px #ff1744);margin-bottom:5px">❤️</div>
+      <p class="final-note">من شخص بحبك أكثر مما تتخيلي ❤️</p>
+      <p class="signature">إلى حبيبة… إنتِ الحكاية الحلوة بين كل الحكايات.</p>
+      <button class="ghost" id="againBtn">خلّينا نعيدها من الأول ↻</button>
+    </div>
+  </section>
+</main>
+<footer>صُنعت بحب، مخصوص لحبيبة ❤️</footer>
+<script>
+const screens=[...document.querySelectorAll('.screen')];
+function show(id){screens.forEach(s=>s.classList.toggle('active',s.id===id));window.scrollTo({top:0,behavior:'smooth'});}
+const hearts=['♥','♡','❤','💗','✦'];
+function floatHeart(){const e=document.createElement('span');e.className='heart-float';e.textContent=hearts[Math.floor(Math.random()*hearts.length)];e.style.left=Math.random()*100+'vw';e.style.fontSize=(12+Math.random()*25)+'px';e.style.animationDuration=(5+Math.random()*6)+'s';document.body.appendChild(e);setTimeout(()=>e.remove(),12000)}
+let floatTimer=setInterval(floatHeart,850);
+document.getElementById('startBtn').addEventListener('click',()=>{show('heartScreen');setTimeout(()=>{document.querySelector('.heart-path').style.animation='none';void document.querySelector('.heart-path').offsetWidth;document.querySelector('.heart-path').style.animation='';},50)});
+document.getElementById('continueBtn').addEventListener('click',()=>show('messageScreen'));
+document.getElementById('finalBtn').addEventListener('click',()=>{show('finalScreen');burstHearts();for(let i=0;i<55;i++)setTimeout(floatHeart,i*45)});
+document.getElementById('againBtn').addEventListener('click',()=>{show('welcome');});
+function burstHearts(){
+ const c=document.getElementById('burst'),ctx=c.getContext('2d');let w=c.width=innerWidth,h=c.height=innerHeight;
+ const particles=Array.from({length:170},()=>({x:w/2,y:h*.48,a:Math.random()*Math.PI*2,s:2+Math.random()*7,v:2+Math.random()*7,life:50+Math.random()*55,rot:Math.random()*6.28,spin:(Math.random()-.5)*.15,heart:Math.random()>.4}));
+ let frame=0;function draw(){ctx.clearRect(0,0,w,h);particles.forEach(p=>{p.x+=Math.cos(p.a)*p.v;p.y+=Math.sin(p.a)*p.v;p.v*=.975;p.life--;p.rot+=p.spin;ctx.save();ctx.translate(p.x,p.y);ctx.rotate(p.rot);ctx.globalAlpha=Math.max(0,Math.min(1,p.life/25));ctx.fillStyle=['#ff3155','#ff8ca3','#ffffff','#b80d38'][Math.floor(Math.random()*4)];if(p.heart){ctx.font=p.s*3+'px serif';ctx.fillText('♥',0,0)}else{ctx.fillRect(0,0,p.s,p.s*1.8)}ctx.restore()});frame++;if(frame<110)requestAnimationFrame(draw);else ctx.clearRect(0,0,w,h)}draw();
+}
+addEventListener('resize',()=>{const c=document.getElementById('stars');c.width=innerWidth*devicePixelRatio;c.height=innerHeight*devicePixelRatio;});
+/* Twinkling stars */
+(()=>{const c=document.getElementById('stars'),ctx=c.getContext('2d');let W,H,dpr,stars=[];function init(){dpr=Math.min(devicePixelRatio||1,2);W=innerWidth;H=innerHeight;c.width=W*dpr;c.height=H*dpr;c.style.width=W+'px';c.style.height=H+'px';ctx.setTransform(dpr,0,0,dpr,0,0);stars=Array.from({length:Math.min(100,Math.floor(W*H/9000))},()=>({x:Math.random()*W,y:Math.random()*H,r:.3+Math.random()*1.4,a:.1+Math.random()*.6,v:.003+Math.random()*.012}))}function draw(){ctx.clearRect(0,0,W,H);stars.forEach(s=>{s.a+=s.v;if(s.a>.8||s.a<.1)s.v*=-1;ctx.beginPath();ctx.arc(s.x,s.y,s.r,0,Math.PI*2);ctx.fillStyle=`rgba(255,210,220,${s.a})`;ctx.fill()});requestAnimationFrame(draw)}addEventListener('resize',init);init();draw()})();
+</script>
+<script>
+/* A gentle original ambient melody generated locally with Web Audio; starts only after a tap. */
+let audioCtx=null, musicOn=false, melodyTimer=null, noteIndex=0;
+const notes=[261.63,329.63,392,329.63,293.66,349.23,440,392,261.63,329.63,392,523.25,440,392,329.63,293.66];
+function playNote(freq,duration=.85){if(!audioCtx)return;const now=audioCtx.currentTime;const osc=audioCtx.createOscillator(),gain=audioCtx.createGain(),filter=audioCtx.createBiquadFilter();osc.type='sine';osc.frequency.value=freq;filter.type='lowpass';filter.frequency.value=1000;gain.gain.setValueAtTime(.0001,now);gain.gain.exponentialRampToValueAtTime(.055,now+.08);gain.gain.exponentialRampToValueAtTime(.0001,now+duration);osc.connect(filter);filter.connect(gain);gain.connect(audioCtx.destination);osc.start(now);osc.stop(now+duration+.02)}
+function startMusic(){audioCtx=audioCtx||new(window.AudioContext||window.webkitAudioContext)();audioCtx.resume();musicOn=true;playNote(notes[noteIndex++%notes.length],1.1);melodyTimer=setInterval(()=>{if(musicOn)playNote(notes[noteIndex++%notes.length],1.05)},620);document.getElementById('musicLabel').textContent='إيقاف الموسيقى'}
+function stopMusic(){musicOn=false;clearInterval(melodyTimer);document.getElementById('musicLabel').textContent='شغّلي الموسيقى'}
+document.getElementById('musicBtn').addEventListener('click',()=>musicOn?stopMusic():startMusic());
+</script>
+</body>
+</html>
